@@ -1,1 +1,1 @@
-Final Project for Computational Graphics course at [link](url)
+Final Project for Computational Graphics course at [http://alessandrogiacomini.github.io](url)
