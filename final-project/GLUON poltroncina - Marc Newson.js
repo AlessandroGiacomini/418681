@@ -172,7 +172,7 @@ var fuse7l = MAP(lateral7l)(domain2);
 //***
 //side lint
 
-var domain2 = DOMAIN([[0,1],[0,1]])([50,50]);
+var domain2 = DOMAIN([[0,1],[0,1]])([30,30]);
 var c0lint = BEZIER(S0)([[2.42, 2.88, -lsideintext-lsideint], [1.42, 3.42, -lsideintext-lsideint], [1.13, 5.08, -lsideintext-lsideint], [1.63, 5.24, -lsideintext-lsideint]]);
 var c1lint = BEZIER(S0)([[1.63, 5.24, -lsideintext-lsideint], [2.21, 5.46, -lsideintext-lsideint], [2.66, 4.3, -lsideintext-lsideint], [2.6, 3.84, -lsideintext-lsideint]]);
 var c2lint = BEZIER(S0)([[2.6, 3.84, -lsideintext-lsideint], [2.59, 3.66, -lsideintext-lsideint], [2.58, 3.46, -lsideintext-lsideint], [2.71, 3.38, -lsideintext-lsideint]]);
@@ -269,8 +269,8 @@ var side = COLOR(colormetal)(STRUCT([fuse0d,fuse1d,fuse2d,fuse3d,fuse4d,fuse5d,f
 //********************************************************************************************************
 //Sofa pillowUP
 
-var domainp = PROD1x1([INTERVALS(1)(40),INTERVALS(1)(40)]);
-var domainp2 = DOMAIN([[0,1],[0,1]])([40,40]);
+var domainp = PROD1x1([INTERVALS(1)(30),INTERVALS(1)(30)]);
+var domainp2 = DOMAIN([[0,1],[0,1]])([30,30]);
 var lpillow = 2.46
 var lhalfpillow = 1.23
 colormetal = [0.5,0.5,0.5,1]
