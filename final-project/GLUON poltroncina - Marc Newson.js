@@ -1,6 +1,6 @@
 //GLUON poltroncina - Marc Newson
 //********************************************************************************************************
-//Base sofa
+//Base chair
 
 var domainbase = DOMAIN([[0,1],[0,2*PI]])([40,40]);
 colormetal = [0.5,0.5,0.5,1]
@@ -19,7 +19,7 @@ closebase2 = COLOR([0,0,0,1])(T([2])([1.59])(DISK(1.04)(50)));
 base = T([0,1,2])([3.55,0.022,-1.43])(R([1,2])([-PI/2,-PI/2])(STRUCT([closebase1, closebase2, surfacecurvebase, surfacebase])));
 
 //********************************************************************************************************
-//Sofa vine
+//Chair vine
 var domainv = DOMAIN([[0,1],[0,2*PI]])([30,30]);
 var lvine = 2.86;
 
@@ -41,7 +41,7 @@ var vinel8 = T([0,1,2])([4.59,3.20,-lvine])(vinel);
 var vine = STRUCT([vined1,vined2,vined3,vined4,vinel5,vinel6,vinel7,vinel8]);
 
 //********************************************************************************************************
-//Sofa side
+//Chair side
 
 var domain = PROD1x1([INTERVALS(1)(30),INTERVALS(1)(30)]);
 var domain2 = DOMAIN([[0,1],[0,1]])([30,30]);
@@ -267,7 +267,7 @@ var side = COLOR(colormetal)(STRUCT([fuse0d,fuse1d,fuse2d,fuse3d,fuse4d,fuse5d,f
 		    latside,vine]));
 
 //********************************************************************************************************
-//Sofa pillowUP
+//Chair pillowUP
 
 var domainp = PROD1x1([INTERVALS(1)(30),INTERVALS(1)(30)]);
 var domainp2 = DOMAIN([[0,1],[0,1]])([30,30]);
@@ -296,7 +296,7 @@ var pillow3 = MAP(lateral3)(domainp2);
 var pillowup = T([0,1])([0.01,-0.025])(STRUCT([pillow0, pillow1, pillow2, pillow3]));
 
 //********************************************************************************************************
-//Sofa pillowDOWN
+//Chair pillowDOWN
 
 var c7lsof = BEZIER(S0)([[2.74, 2.95, -lsideintext-lsideint], [2.85, 2.24, -lsideintext-lsideint], [4.94, 2.54, -lsideintext-lsideint], [4.87, 3.17, -lsideintext-lsideint]]);
 var cmiddledsof7 = BEZIER(S0)([[2.66, 2.99, -lsideintext-lhalfpillow], [2.55, 2.14, -lsideintext-lhalfpillow], [5.06, 2.41, -lsideintext-lhalfpillow], [4.93, 3.19, -lsideintext-lhalfpillow]]);
@@ -323,12 +323,12 @@ var pillowdown = T([0])([-0.012])(STRUCT([pillow7, pillow8, pillow9, pillow10]))
 var pillow = COLOR(colorpillow)(STRUCT([pillowup, pillowdown]));
 
 //********************************************************************************************************
-//Sofa
+//Chair
 
-var unionsofa = STRUCT([side, pillow, vine]);
+var unionchair = STRUCT([side, pillow, vine]);
 
 //********************************************************************************************************
 //MODEL
 
-var model = STRUCT([unionsofa, base]);
+var model = STRUCT([unionchair, base]);
 DRAW(model);
